@@ -3,7 +3,7 @@ import { Toaster } from "react-hot-toast";
 import { Route, Routes,Navigate } from "react-router-dom";
 import Footer from "./Components/Footer.jsx";
 import Layout from "./Components/Layout.jsx";
-import Home from "./Pages/Home.jsx";
+import Home from "./Pages/HeroPage/Home.jsx";
 import LoginPage from "./Pages/LoginPage.jsx";
 import SignupPage from "./Pages/SignupPage.jsx";
 import { useUserStore } from "./store/useUserStore.js";

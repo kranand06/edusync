@@ -29,7 +29,7 @@ const SignupPage = () => {
     username: "",
   });
   const validate = () => {
-    if (!formData.firstName.trim())
+    if (!formData.firstName)
       return toast.error("First name is required");
     if (!formData.lastName.trim()) return toast.error("Last name is required");
     if (!formData.email.trim()) return toast.error("email is required");
@@ -62,7 +62,17 @@ const SignupPage = () => {
         formData.role
       );
     }
-    setFormData("");
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      role: "",
+      year: "",
+      branch: "",
+      username: "",
+    });
   }
 
   const [passwordVisible, setPasswordVisible] = useState(false);

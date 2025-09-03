@@ -1,11 +1,15 @@
-import { useUserStore } from "../store/useUserStore.js";
+import { useUserStore } from "../../store/useUserStore.js";
+import Header from "./Header.jsx";
+import HeroNav from "./HeroNav.jsx";
 
 function Home() {
   const { user } = useUserStore();
   return (
     <div className="min-h-screen bg-theme text-theme-1 transition-colors duration-300 flex flex-col">
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center text-center px-6 py-20  text-theme-1">
+      <HeroNav />
+      <Header />
+      {/* <section className="flex flex-col items-center justify-center text-center px-6 py-20  text-theme-1">
         <h2 className="text-4xl sm:text-5xl font-bold mb-6">
           Welcome <span className="text-primary">{user ? user.firstName : "Guest"} </span> to edu<span className="text-primary">Connect</span>
         </h2>
@@ -27,10 +31,10 @@ function Home() {
             Login
           </a>
         </div>
-      </section>
+      </section> */}
 
       {/* Features Section */}
-      <section className="px-6 py-16 flex flex-col items-center gap-12">
+      {/* <section className="px-6 py-16 flex flex-col items-center gap-12">
         <h3 className="text-3xl font-bold text-theme-1">Why edu<span className="text-primary">Connect</span>?</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl">
           <div className="p-6 bg-secondary rounded-lg shadow-md hover:shadow-xl transition">
@@ -60,7 +64,7 @@ function Home() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

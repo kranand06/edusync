@@ -41,10 +41,10 @@ export const useUserStore = create((set) => ({
 
       set({ user: response.data.user, loading: false });
       toast.success("Signup successful");
-      console.log(user);
+      console.log(response.data.user);
     } catch (error) {
       set({ loading: false });
-      console.log("Error in signup store : ", error.response?.data);
+      console.log("Error in signup store : ", error.response?.data || error.message);
       toast.error(error?.response?.data?.message || "Signup failed");
     }
   },
